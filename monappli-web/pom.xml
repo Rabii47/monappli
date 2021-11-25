@@ -17,6 +17,11 @@
   <project.groupeId>com.objis.demomaven</project.groupeId>
   <project.version>1.0-SNAPSHOT</project.version>
   </properties>
+  
+  <scm>
+    <connection>scm:git:https://github.com/Rabii47/TP3.git</connection>
+    <developerConnection>scm:git:https://github.com/Rabii47/TP3.git</developerConnection>
+  </scm>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -25,15 +30,15 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-<groupId>${project.groupeId}</groupId>
+<groupId>com.objis.demomaven</groupId>
   <artifactId>monappli-domaine</artifactId>
-  <version>${project.groupeId}</version>
+  <version>1.0-SNAPSHOT</version>
 
 </dependency>
 <dependency>
-<groupId>${project.groupeId}</groupId>
+<groupId>com.objis.demomaven</groupId>
   <artifactId>monappli-service</artifactId>
-  <version>${project.groupeId}</version>
+  <version>1.0-SNAPSHOT</version>
 
 </dependency>
     
