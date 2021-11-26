@@ -1,17 +1,16 @@
-node {
-	stage('Recup sources') {
-		echo 'Checkout SCM....'
+// Declarative //
+pipeline {
+	agent any
+	stages {
+		stage('Build') {
+			steps {
+				bat 'cd monappli & mvn install'
+			}
+		 post {
+                success {
+                    junit 'monappli/monappli-domaine/target/surefire-reports/*.xml'
+                        }
+                 }
+               
+		}
 	}
-	stage('Compile') {
-		echo 'Compilation....'
-	}
-	stage('Test') {
-		echo 'Testing....'
-	}
-	stage('Package') {
-		echo 'Packaging....'
-	}
-	stage('Deploy') {
-		echo 'Deploying....'
-	}
-}
